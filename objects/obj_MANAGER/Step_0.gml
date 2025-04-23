@@ -153,7 +153,7 @@ if (dealing){
 ///PLAYING
 ///
 if playing{
-	show_debug_message("Playing");
+	//show_debug_message("Playing");
 	///
 	///
 	///OPONENT PLAYING
@@ -309,6 +309,6 @@ if (!reshuffled){
 
 }
 
-show_debug_message(comp[|0]);
-show_debug_message("Deck num: "+string(deck_num) +"  Player num: "+string(player_num) + " -comp num: "+string(comparison_num_player) + "  Oponent num: "+string(oponent_num) + " -comp num: "+string(comparison_num_oponent) + "  Player score: "+string(player_score) + "  Oponent score: "+string(oponent_score)+ "  Discard num: "+string(discard_num));
+//show_debug_message(comp[|0]);
+//show_debug_message("Deck num: "+string(deck_num) +"  Player num: "+string(player_num) + " -comp num: "+string(comparison_num_player) + "  Oponent num: "+string(oponent_num) + " -comp num: "+string(comparison_num_oponent) + "  Player score: "+string(player_score) + "  Oponent score: "+string(oponent_score)+ "  Discard num: "+string(discard_num));
 
