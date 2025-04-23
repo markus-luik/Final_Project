@@ -1,0 +1,1 @@
+money = lerp(money,money_to_be,0.1);
