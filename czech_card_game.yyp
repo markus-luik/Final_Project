@@ -64,7 +64,9 @@
     {"id":{"name":"obj_pos_money","path":"objects/obj_pos_money/obj_pos_money.yy",},},
     {"id":{"name":"obj_pos_OPONENT_score","path":"objects/obj_pos_OPONENT_score/obj_pos_OPONENT_score.yy",},},
     {"id":{"name":"obj_pos_PLAYER_score","path":"objects/obj_pos_PLAYER_score/obj_pos_PLAYER_score.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},},
+    {"id":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
+    {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"scr_global_variables","path":"scripts/scr_global_variables/scr_global_variables.yy",},},
     {"id":{"name":"snd_chk","path":"sounds/snd_chk/snd_chk.yy",},},
     {"id":{"name":"snd_loss","path":"sounds/snd_loss/snd_loss.yy",},},
@@ -94,7 +96,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
+    {"roomId":{"name":"rm_ending","path":"rooms/rm_ending/rm_ending.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
