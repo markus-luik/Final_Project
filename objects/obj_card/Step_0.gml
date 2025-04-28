@@ -56,10 +56,12 @@ if(in_player_hand && face_up && !obj_MANAGER.p_played){
 		to_scale_x = REG_scale;
 		to_scale_y = REG_scale;
 		//card stacks on last card
-		if (global.last_card_depth != 0){move_id.target_depth = global.last_card_depth - 1;} //check that the global variable has been initialized, uses last card depth - 1 
-		to_depth = target_depth;
-		global.last_card_depth = move_id.target_depth;
-		global.mouse_busy = false; //releases mouse of its occcupation
+		if (move_id != noone){ //in case there was no card
+			if (global.last_card_depth != 0){move_id.target_depth = global.last_card_depth - 1;} //check that the global variable has been initialized, uses last card depth - 1 
+			to_depth = target_depth;
+			global.last_card_depth = move_id.target_depth;
+			global.mouse_busy = false; //releases mouse of its occcupation
+		}
 	}
 
 }else {//deck cards remain unscaled
