@@ -67,70 +67,71 @@ if (dealing){
 		
 		//
 		//PLAYER
-		if oponent_dealt {
-			if player_num < num_hand_size{
-				//looks at the deck and returns the LAST value added to it (top card)
-				var dealt_card = ds_list_find_value(deck,ds_list_size(deck)-1); //-1 because ds list starts at 0
-					if (last_card_in_place_p){
+		//if oponent_dealt {
+		//	if player_num < num_hand_size{
+		//		//looks at the deck and returns the LAST value added to it (top card)
+		//		var dealt_card = ds_list_find_value(deck,ds_list_size(deck)-1); //-1 because ds list starts at 0
+		//			if (last_card_in_place_p){
 				
 						
-						if (!(dealt_card == undefined)) {
-						//deletes card from deck list
-						ds_list_delete(deck,ds_list_size(deck)-1);
-						//adds card to player hand list
-						ds_list_add(player_hand,dealt_card);
-							show_debug_message("I added CARD " + string(dealt_card)+ " to P hand at POS " + string(ds_list_find_index(player_hand,dealt_card)))
+		//				if (!(dealt_card == undefined)) {
+		//				//deletes card from deck list
+		//				ds_list_delete(deck,ds_list_size(deck)-1);
+		//				//adds card to player hand list
+		//				ds_list_add(player_hand,dealt_card);
+		//					show_debug_message("I added CARD " + string(dealt_card)+ " to P hand at POS " + string(ds_list_find_index(player_hand,dealt_card)))
 		
-						//places card in player's hand area
-						audio_play_sound(snd_chk,2,false);
-						dealt_card.x_to_move = hand_x_pos + which_card_in_hand * hand_x_offset*2;
-						dealt_card.y_to_move = hand_y_pos;
+		//				//places card in player's hand area
+		//				audio_play_sound(snd_chk,2,false);
+		//				dealt_card.x_to_move = hand_x_pos + which_card_in_hand * hand_x_offset*2;
+		//				dealt_card.y_to_move = hand_y_pos;
 		
-						//card is in player's hand
-						dealt_card.in_player_hand = true;
+		//				//card is in player's hand
+		//				dealt_card.in_player_hand = true;
 					
-						//resets counter, increments card counter
-						wait_between_cards = 0;
-						show_debug_message("Nr of card in hand: " + string(which_card_in_hand))
-					}
-				}
-				//// this is -> an overly convoluted way of checking to see if the last card reached where it should be
-				show_debug_message(which_card_in_hand)
-					var last_p_hand_card = player_hand[|which_card_in_hand]; //last card
-						if (last_p_hand_card == undefined) return;
-					//distance of that card to the
-					var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos + which_card_in_hand * hand_x_offset*2,hand_y_pos);
-					if (dist_to_goal_p < 10.00) { //If last card is close enough to where it should be, send in the next one
-						last_card_in_place_p = true;
-						which_card_in_hand ++;
-						}else{last_card_in_place_p = false;} //otherwise not
-			}else {
-				//horribly innefiecnt scope use but basically checks AGAIN if the last card is in the right place
-				//AND IT DOESN'T REALLY WORK BUT IT KIND OF DOES
-				var last_p_hand_card = oponent_hand[|which_card_in_hand]; //last card
-				//distance of that card to the place
-				var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos_oponent + (which_card_in_hand) * hand_x_offset*2,hand_y_pos_oponent);
-						if (dist_to_goal_p < 0.01) { //If last card is close enough to where it should be, send in the next one
-							player_dealt = true; // STATE BOOLEAN TRIGGERED
-							show_debug_message("Player dealt");
-							which_card_in_hand = 0;
-							//PLAYER HAS FINALLY BEEN DEALT!!
-						}
-					}
-			}
+		//				//resets counter, increments card counter
+		//				wait_between_cards = 0;
+		//				show_debug_message("Nr of card in hand: " + string(which_card_in_hand))
+		//			}
+		//		}
+		//		//// this is -> an overly convoluted way of checking to see if the last card reached where it should be
+		//		show_debug_message(which_card_in_hand)
+		//			var last_p_hand_card = player_hand[|which_card_in_hand]; //last card
+		//				if (last_p_hand_card == undefined) return;
+		//			//distance of that card to the
+		//			var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos + which_card_in_hand * hand_x_offset*2,hand_y_pos);
+		//			if (dist_to_goal_p < 10.00) { //If last card is close enough to where it should be, send in the next one
+		//				last_card_in_place_p = true;
+		//				which_card_in_hand ++;
+		//				}else{last_card_in_place_p = false;} //otherwise not
+		//	}else {
+		//		//horribly innefiecnt scope use but basically checks AGAIN if the last card is in the right place
+		//		//AND IT DOESN'T REALLY WORK BUT IT KIND OF DOES
+		//		var last_p_hand_card = oponent_hand[|which_card_in_hand]; //last card
+		//		//distance of that card to the place
+		//		var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos_oponent + (which_card_in_hand) * hand_x_offset*2,hand_y_pos_oponent);
+		//				if (dist_to_goal_p < 0.01) { //If last card is close enough to where it should be, send in the next one
+		//					player_dealt = true; // STATE BOOLEAN TRIGGERED
+		//					show_debug_message("Player dealt");
+		//					which_card_in_hand = 0;
+		//					//PLAYER HAS FINALLY BEEN DEALT!!
+		//				}
+		//			}
+		//	}
 		//
 		//
 		//FINALIZING DEALING
-	if player_dealt && oponent_dealt{
+	//if player_dealt && oponent_dealt{
+	if oponent_dealt{
 		//turn over player cards
-		for (var _i = 0; _i < num_hand_size; _i ++){
-			var hand_card = ds_list_find_value(player_hand,ds_list_size(player_hand)-(_i+1));	
-			if hand_card == undefined {break;}
-			if hand_card.in_player_hand == true{
-				hand_card.face_up = true;
-				show_debug_message("turned")
-			}
-		}
+		//for (var _i = 0; _i < num_hand_size; _i ++){
+		//	var hand_card = ds_list_find_value(player_hand,ds_list_size(player_hand)-(_i+1));	
+		//	if hand_card == undefined {break;}
+		//	if hand_card.in_player_hand == true{
+		//		hand_card.face_up = true;
+		//		show_debug_message("turned")
+		//	}
+		//}
 		////////turn over oponent cards
 		//////for (var _i = 0; _i < num_hand_size; _i ++){
 		//////	var op_hand_card = ds_list_find_value(oponent_hand,ds_list_size(oponent_hand)-(_i+1));	
