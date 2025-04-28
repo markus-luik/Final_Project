@@ -11,24 +11,6 @@ depth = lerp(depth,to_depth,lerping_depth);
 
 if(in_player_hand && face_up && !obj_MANAGER.p_played){
 	
-	////mouse click on object, VERY USEFUL
-	//if (position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(mb_left)){
-		
-	//	show_debug_message("Clicked on card");
-		
-	//	//reduces money
-	//	obj_MANAGER_text__incl_score.money_to_be -= 280;
-		
-	//	//starts the comparison function
-	//	obj_MANAGER.comparison(id);
-		
-	//}
-	//else if position_meeting(mouse_x,mouse_y,id){
-	//	y_to_move = obj_pos_hand.y - 20;
-	//}else{
-	//y_to_move = obj_pos_hand.y;
-	//}
-	
 	//DRAG & DROP
 	//Start
 	if (position_meeting(mouse_x,mouse_y,id) && mouse_check_button(mb_left) && !global.mouse_busy){
@@ -56,7 +38,8 @@ if(in_player_hand && face_up && !obj_MANAGER.p_played){
 		to_scale_x = REG_scale;
 		to_scale_y = REG_scale;
 		//card stacks on last card
-		if (move_id != noone){ //in case there was no card
+		if (move_id != 0){ //safety if there was no card
+			show_debug_message("Move id is: " + string(move_id))
 			if (global.last_card_depth != 0){move_id.target_depth = global.last_card_depth - 1;} //check that the global variable has been initialized, uses last card depth - 1 
 			to_depth = target_depth;
 			global.last_card_depth = move_id.target_depth;
@@ -70,14 +53,25 @@ if(in_player_hand && face_up && !obj_MANAGER.p_played){
 	to_depth = target_depth;
 }
 
+//CARD SELECTION -- playing into the arena
+if in_player_hand && place_meeting(x,y,obj_pos_hand_oponent_played) && image_xscale == REG_scale{
+	obj_MANAGER.comparison(id);
+	obj_MANAGER_text__incl_score.money_to_be -= 280;
+}
+
 
 
 
 
 
 if(face_index == 0) sprite_index = spr_criminalRec_US;
-if(face_index == 1) sprite_index = spr_A_criminalRec_CN;
-if(face_index == 2) sprite_index = spr_Q_criminal;
+if(face_index == 1) sprite_index = spr_Q_criminal
+if(face_index == 2) sprite_index = spr_A_student_OGS;
+if(face_index == 3) sprite_index = spr_Q_student;
+if(face_index == 4) sprite_index = spr_A_finances;
+if(face_index == 5) sprite_index = spr_Q_poor;
+if(face_index == 6) sprite_index = spr_Q_nationality;
+if(face_index == 7) sprite_index = spr_A_nation_china;
 
 if (face_up == false) sprite_index = spr_card;
 

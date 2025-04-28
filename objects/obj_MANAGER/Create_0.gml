@@ -43,10 +43,10 @@ hand_played_y_pos_oponent = obj_pos_hand_oponent_played.y;
 hand_x_offset = 100;
 
 //card setup vars
-num_cards = 15;
+num_cards = 4;
 
 //hand size
-num_hand_size = 3;
+num_hand_size = 1;
 
 //prep for state machine
 dealing = true;
@@ -82,6 +82,7 @@ which_card_being_discarded = 0;
 wait_max = 50;
 wait = 0;
 
+var fx = 1 //face index
 ///
 ///CZECH CONSULAR DECK
 for (var _i = 0; _i < num_cards; _i++){
@@ -90,7 +91,9 @@ for (var _i = 0; _i < num_cards; _i++){
 	//modulo to determine face index of card
 	//creates an even list
 	//NOT perfectly shuffled, yet
-	new_card.face_index = 2;
+	new_card.face_index = fx;
+	fx += 2;
+	if fx >= 7{fx = 1}
 	
 	//card not face up
 	new_card.face_up = false;
@@ -113,6 +116,7 @@ for (var _i = 0; _i < num_cards; _i++){
 	
 }
 
+var fx_p = 0;
 ///
 ///PLAYER DECK
 for (var _i = 0; _i < num_cards; _i++){
@@ -121,7 +125,9 @@ for (var _i = 0; _i < num_cards; _i++){
 	//modulo to determine face index of card
 	//creates an even list
 	//NOT perfectly shuffled, yet
-	new_card.face_index = _i % 2;
+	new_card.face_index = fx_p;
+	fx_p += 2;
+	if fx_p >= 6 {fx_p = 0}
 	
 	//card not face up
 	new_card.face_up = false;
@@ -144,11 +150,6 @@ for (var _i = 0; _i < num_cards; _i++){
 	
 }
 
-//randomizes randomness seed for a unique shuffle
-randomize();
-//shuffles deck list!
-ds_list_shuffle(deck);
-
 //FIX FOR POST-SHUFFLE HEIGHT AND POSITION
 for (var _i = 0; _i < num_cards; _i++){
 		var card_to_check_height = ds_list_find_value(deck,ds_list_size(deck)-(_i+1));
@@ -157,6 +158,33 @@ for (var _i = 0; _i < num_cards; _i++){
 			card_to_check_height.y= deck_y_pos-pos*6;
 			card_to_check_height.y_to_move= deck_y_pos-pos*6;
 	}
+	
+function draw_card(){
+	//looks at the deck and returns the LAST value added to it (top card)
+	var dealt_card = ds_list_find_value(deck,ds_list_size(deck)-1); //-1 because ds list starts at 0
+						
+		if (!(dealt_card == undefined)) {
+			//deletes card from deck list
+			ds_list_delete(deck,ds_list_size(deck)-1);
+			//adds card to player hand list
+			ds_list_add(player_hand,dealt_card);
+				show_debug_message("I added CARD " + string(dealt_card)+ " to Player hand at POS " + string(ds_list_find_index(player_hand,dealt_card)))
+		
+			//places card in player's hand area
+			audio_play_sound(snd_chk,2,false);
+			dealt_card.x_to_move = hand_x_pos + which_card_in_hand * hand_x_offset*2;
+			dealt_card.y_to_move = hand_y_pos;
+		
+			//card is in player's hand
+			dealt_card.in_player_hand = true;
+			
+			//depth
+			dealt_card.target_depth = -600;
+			
+			//face up
+			dealt_card.face_up = true;
+			}
+}
 
 
 function comparison (ID){	

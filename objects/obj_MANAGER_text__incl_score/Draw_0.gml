@@ -13,7 +13,7 @@ var d = 4;
 //draw_text_colour(x_pos_op-d, y_pos_op+d,op_score,c_black,c_black,c_black,c_black,1);
 //draw_text(x_pos_op, y_pos_op,op_score);
 //PLAYER
-draw_text_colour(x_pos_p-d, y_pos_p+d,p_score,c_black,c_black,c_black,c_black,1);
+draw_text_colour(x_pos_p-d, y_pos_p+d,string(p_score) +"/4",c_black,c_black,c_black,c_black,1);
 draw_text(x_pos_p, y_pos_p,p_score);
 //MONEY
 draw_text_colour(x_pos_money-d,y_pos_money+d,m_draw,c_black,c_black,c_black,c_black,1);

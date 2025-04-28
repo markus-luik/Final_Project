@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"China",
-    "path":"folders/Objects/ASSETS cz and cn/China.yy",
+    "path":"folders/Objects/ASSETS/China.yy",
   },
   "parentObjectId":null,
   "persistent":false,

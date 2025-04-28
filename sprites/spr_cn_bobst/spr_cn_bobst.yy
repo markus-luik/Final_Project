@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"China",
-    "path":"folders/Sprites/China.yy",
+    "path":"folders/Sprites/Play/Assets/China.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

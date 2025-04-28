@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Czech",
-    "path":"folders/Objects/ASSETS cz and cn/Czech.yy",
+    "path":"folders/Objects/ASSETS/Czech.yy",
   },
   "parentObjectId":null,
   "persistent":false,

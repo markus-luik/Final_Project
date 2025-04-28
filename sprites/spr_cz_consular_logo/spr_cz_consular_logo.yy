@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Czech",
-    "path":"folders/Sprites/Czech.yy",
+    "path":"folders/Sprites/Play/Assets/Czech.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

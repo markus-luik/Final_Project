@@ -23,5 +23,6 @@ if (inspection_on){
 			show_debug_message("Depth "+string(objID.depth));
 			show_debug_message("X "+string(objID.x));
 			show_debug_message("Y "+string(objID.y));
+			show_debug_message("In player hand: "+ string(objID.in_player_hand))
 		}
 }

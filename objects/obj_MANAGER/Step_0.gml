@@ -205,7 +205,7 @@ if playing{
 					end_comp();
 					show_debug_message("tie");
 				}
-				else if (p_i == 0 && o_i == 2 || p_i == 1 && o_i == 2){ //player wins
+				else if (p_i == 0 && o_i == 1 || p_i == 2 && o_i == 3 || p_i == 4 && o_i == 5  || p_i == 6 && o_i == 7 ){ //player wins
 					if !score_changed {player_score ++; 
 						audio_play_sound(snd_win,1,false);
 						score_changed = true;
@@ -217,11 +217,12 @@ if playing{
 					if !score_changed {
 						oponent_score ++;
 						audio_play_sound(snd_loss,1,false);
-						show_debug_message("Hey! I just played sound!")
+						show_message("Wrong answer... Try again");
 						score_changed = true;
+						game_end();
 						}
-					show_debug_message("Oponent wins");
-					end_comp();
+					//show_debug_message("Oponent wins");
+					//end_comp();
 				}
 			}else {end_comp(); show_debug_message("Let end_comp do it's thing...");}
 		}else wait_between_reveal ++;
@@ -243,9 +244,10 @@ if (deck_num == 0 && player_num == 0) {
 	///RESHUFFLING
 	///
 if (!reshuffled){
-	show_debug_message("Visa submitted. You now have a 2/3 chance of actually getting the visa ahahaha");
+	show_message("Visa submitted. Now you have to hand in your passport, wait 90 days, do an interview, and maybe not even get it.... Good luck and have fun in Prague!");
 	obj_MANAGER_text__incl_score.visa_done = true;
 	obj_black_Text_bg.visible=true;
+	game_end();
 	
 	//deck_num =  ds_list_size(deck)
 	//discard_num = ds_list_size(discard);
