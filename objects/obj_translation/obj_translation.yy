@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_card",
+  "%Name":"obj_translation",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_card",
+  "name":"obj_translation",
   "overriddenProperties":[],
   "parent":{
     "name":"ASSETS",
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_card",
-    "path":"sprites/spr_card/spr_card.yy",
+    "name":"spr_translation_tray",
+    "path":"sprites/spr_translation_tray/spr_translation_tray.yy",
   },
   "spriteMaskId":null,
   "visible":true,

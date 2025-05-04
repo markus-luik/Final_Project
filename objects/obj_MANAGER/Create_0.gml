@@ -186,6 +186,31 @@ function draw_card(){
 			}
 }
 
+function send_back(card_to_send){
+			//places card in player's hand area
+			audio_play_sound(snd_chk,2,false);
+			card_to_send.x_to_move = hand_x_pos + which_card_in_hand * hand_x_offset*2;
+			card_to_send.y_to_move = hand_y_pos;
+		
+			//card is in player's hand
+			card_to_send.in_player_hand = true;
+			
+			//depth
+			card_to_send.target_depth = -600;
+			
+			//face up
+			card_to_send.face_up = true;
+			
+			//resets variables
+			show_debug_message("Player still needs to play; card wasn't translated")
+			var reset = function(){
+				p_played = false; //determines if player can move card
+				score_changed = false; //determines if cards can be compared
+			}
+				////60 frame delay BEFORE LETTING THE PLAYER PLAY AGAIN	
+			call_later(60,time_source_units_frames,reset,false); //calls later to prevent the comparison from running as the card lerps
+}
+
 
 function comparison (ID){	
 	ID.face_up = true;
@@ -261,9 +286,7 @@ function end_comp(){
 		}
 }
 
-function wait_for_me(){
-	wait_finish = true;
-}
+
 
 function the_great_reset(){
 	reshuffled = true;

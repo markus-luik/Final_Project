@@ -65,80 +65,8 @@ if (dealing){
 				}
 		}
 		
-		//
-		//PLAYER
-		//if oponent_dealt {
-		//	if player_num < num_hand_size{
-		//		//looks at the deck and returns the LAST value added to it (top card)
-		//		var dealt_card = ds_list_find_value(deck,ds_list_size(deck)-1); //-1 because ds list starts at 0
-		//			if (last_card_in_place_p){
-				
-						
-		//				if (!(dealt_card == undefined)) {
-		//				//deletes card from deck list
-		//				ds_list_delete(deck,ds_list_size(deck)-1);
-		//				//adds card to player hand list
-		//				ds_list_add(player_hand,dealt_card);
-		//					show_debug_message("I added CARD " + string(dealt_card)+ " to P hand at POS " + string(ds_list_find_index(player_hand,dealt_card)))
-		
-		//				//places card in player's hand area
-		//				audio_play_sound(snd_chk,2,false);
-		//				dealt_card.x_to_move = hand_x_pos + which_card_in_hand * hand_x_offset*2;
-		//				dealt_card.y_to_move = hand_y_pos;
-		
-		//				//card is in player's hand
-		//				dealt_card.in_player_hand = true;
-					
-		//				//resets counter, increments card counter
-		//				wait_between_cards = 0;
-		//				show_debug_message("Nr of card in hand: " + string(which_card_in_hand))
-		//			}
-		//		}
-		//		//// this is -> an overly convoluted way of checking to see if the last card reached where it should be
-		//		show_debug_message(which_card_in_hand)
-		//			var last_p_hand_card = player_hand[|which_card_in_hand]; //last card
-		//				if (last_p_hand_card == undefined) return;
-		//			//distance of that card to the
-		//			var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos + which_card_in_hand * hand_x_offset*2,hand_y_pos);
-		//			if (dist_to_goal_p < 10.00) { //If last card is close enough to where it should be, send in the next one
-		//				last_card_in_place_p = true;
-		//				which_card_in_hand ++;
-		//				}else{last_card_in_place_p = false;} //otherwise not
-		//	}else {
-		//		//horribly innefiecnt scope use but basically checks AGAIN if the last card is in the right place
-		//		//AND IT DOESN'T REALLY WORK BUT IT KIND OF DOES
-		//		var last_p_hand_card = oponent_hand[|which_card_in_hand]; //last card
-		//		//distance of that card to the place
-		//		var dist_to_goal_p = point_distance(last_p_hand_card.x,last_p_hand_card.y,hand_x_pos_oponent + (which_card_in_hand) * hand_x_offset*2,hand_y_pos_oponent);
-		//				if (dist_to_goal_p < 0.01) { //If last card is close enough to where it should be, send in the next one
-		//					player_dealt = true; // STATE BOOLEAN TRIGGERED
-		//					show_debug_message("Player dealt");
-		//					which_card_in_hand = 0;
-		//					//PLAYER HAS FINALLY BEEN DEALT!!
-		//				}
-		//			}
-		//	}
-		//
-		//
-		//FINALIZING DEALING
-	//if player_dealt && oponent_dealt{
+	
 	if oponent_dealt{
-		//turn over player cards
-		//for (var _i = 0; _i < num_hand_size; _i ++){
-		//	var hand_card = ds_list_find_value(player_hand,ds_list_size(player_hand)-(_i+1));	
-		//	if hand_card == undefined {break;}
-		//	if hand_card.in_player_hand == true{
-		//		hand_card.face_up = true;
-		//		show_debug_message("turned")
-		//	}
-		//}
-		////////turn over oponent cards
-		//////for (var _i = 0; _i < num_hand_size; _i ++){
-		//////	var op_hand_card = ds_list_find_value(oponent_hand,ds_list_size(oponent_hand)-(_i+1));	
-		//////	if op_hand_card == undefined {break;}
-		//////		op_hand_card.face_up = true;
-		//////		show_debug_message("turned OP")
-		//////}
 		dealing = false;	
 		playing = true;
 		player_dealt = false;
@@ -199,13 +127,14 @@ if playing{
 				oponents_card.face_up = true;
 
 				var p_i = players_card.face_index;
+				var p_trans = players_card.translated;
 				var o_i = oponents_card.face_index;
 		
 				if (p_i == o_i){ //tie
 					end_comp();
 					show_debug_message("tie");
 				}
-				else if (p_i == 0 && o_i == 1 || p_i == 2 && o_i == 3 || p_i == 4 && o_i == 5  || p_i == 6 && o_i == 7 ){ //player wins
+				else if (p_trans && (p_i == 0 && o_i == 1 || p_i == 2 && o_i == 3 || p_i == 4 && o_i == 5  || p_i == 6 && o_i == 7 )){ //player wins
 					if !score_changed {player_score ++; 
 						audio_play_sound(snd_win,1,false);
 						score_changed = true;
@@ -217,9 +146,9 @@ if playing{
 					if !score_changed {
 						oponent_score ++;
 						audio_play_sound(snd_loss,1,false);
-						show_message("Wrong answer... Try again");
+						show_message("I don't understand, it needs to be in Czech.");
 						score_changed = true;
-						game_end();
+						send_back(players_card);
 						}
 					//show_debug_message("Oponent wins");
 					//end_comp();
@@ -248,68 +177,6 @@ if (!reshuffled){
 	obj_MANAGER_text__incl_score.visa_done = true;
 	obj_black_Text_bg.visible=true;
 	game_end();
-	
-	//deck_num =  ds_list_size(deck)
-	//discard_num = ds_list_size(discard);
-
-	////moves card from discard to deck all at once
-	//if (discard_num == num_cards*2){
-	//	for (var _i = 0; _i < num_cards; _i++){
-	//		var reshuffle_card = ds_list_find_value(discard,ds_list_size(discard)-1);
-	//		ds_list_delete(discard, ds_list_size(discard)-1);
-	//		ds_list_add(deck, reshuffle_card);
-	//	}
-	//}
-	
-	
-	
-	////goes through deck to visually move and reset all the cards
-	//show_debug_message(which_card_being_reshuffled)
-	//if (which_card_being_reshuffled < num_cards){
-	//	if reshuffle_wait > reshuffle_wait_M {
-	//	//var new_deck_card = ds_list_find_value(deck,ds_list_size(deck)-(1+which_card_being_reshuffled));
-	//	var new_deck_card = deck[|which_card_being_reshuffled];
-	//	show_debug_message("Deck num: "+string(deck_num));
-	//	show_debug_message("card: "+string(new_deck_card));
-	
-	//		//goes through the deck to set the right variables
-			
-	//		//depth and x,y
-	//		new_deck_card.target_depth = -which_card_being_reshuffled;
-	//		audio_play_sound(snd_chk,2,false);
-	//		new_deck_card.x_to_move= deck_x_pos;
-	//		new_deck_card.y_to_move= deck_y_pos-which_card_being_reshuffled*6
-	//		show_debug_message(new_deck_card.y);
-		
-	//		//card not face up
-	//		new_deck_card.face_up = false;
-	//		//card not in player hand
-	//		new_deck_card.in_player_hand = false;
-	//		//card no longer discarded
-	//		new_deck_card.discarded = false;
-	//		//depth above prior card
-	//		new_deck_card.target_depth = - which_card_being_reshuffled;
-	//		which_card_being_reshuffled++
-	//		reshuffle_wait = 0;
-	//	}else reshuffle_wait ++;
-	//} else {
-	//	//shuffles list
-	//	ds_list_shuffle(deck);
-	
-	////rearranges cards to be at appropriate heights after shuffling
-	//	for (var _i = 0; _i < num_cards; _i++){
-	//		var card_to_check_height = ds_list_find_value(deck,ds_list_size(deck)-(_i+1));
-	//		var pos = ds_list_find_index(deck, card_to_check_height);
-	//		audio_play_sound(snd_chk,2,false);
-	//			card_to_check_height.target_depth = -pos
-	//			card_to_check_height.y_to_move= deck_y_pos-10;
-	//			card_to_check_height.y_to_move= deck_y_pos-pos*6;
-	//	}
-	//	the_great_reset();
-	
-	//	show_debug_message("Reshuffling ENDED");
-	//}
-
 }
 
 //show_debug_message(comp[|0]);

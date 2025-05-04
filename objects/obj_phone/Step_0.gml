@@ -1,3 +1,7 @@
+//ADD SOUND FX AND SCREEN SHAKE FOR MORE SIGNIFICANCE ON THE PHONE
+//change 
+
+
 if position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(1) && obj_MANAGER.playing && obj_MANAGER.op_played && (ds_list_size(obj_MANAGER.player_hand) == 0){
 	click_counter ++;
 	new_pos();
@@ -33,4 +37,9 @@ switch click_counter{
 		draw_card();
 		click_counter++;
 	break;
+}
+
+//DEV OVERRIDE
+if keyboard_check_pressed(ord("P")){
+	draw_card();
 }

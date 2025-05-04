@@ -12,6 +12,9 @@ target_depth = 0;
 REG_depth = target_depth;
 DRAG_depth = -(room_height+100);
 
+//the card does not start off translated
+translated = false;
+
 
 
 in_place = true;

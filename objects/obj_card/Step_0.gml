@@ -18,7 +18,7 @@ if(in_player_hand && face_up && !obj_MANAGER.p_played){
 		global.mouse_busy = true;
 		global.card_in_move = id;
 	}
-	//var
+		////card variable
 	var move_id = global.card_in_move;
 	//Movement
 	if (global.mouse_busy){ //Moves the card to the cursor position
@@ -54,14 +54,14 @@ if(in_player_hand && face_up && !obj_MANAGER.p_played){
 }
 
 //CARD SELECTION -- playing into the arena
-if in_player_hand && place_meeting(x,y,obj_pos_hand_oponent_played) && image_xscale == REG_scale{
+if !obj_MANAGER.p_played && in_player_hand && place_meeting(x,y,obj_pos_hand_oponent_played) && image_xscale == REG_scale{
 	obj_MANAGER.comparison(id);
 	obj_MANAGER_text__incl_score.money_to_be -= 280;
 }
 
 
 
-
+if (translated) image_index = 1; //changes card to translated ver
 
 
 if(face_index == 0) sprite_index = spr_criminalRec_US;
