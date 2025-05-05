@@ -30,8 +30,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Assets",
-    "path":"folders/Sprites/Play/Assets.yy",
+    "name":"Phone",
+    "path":"folders/Sprites/Play/Assets/Phone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite23",
-    "path":"sprites/Sprite23/Sprite23.yy",
+    "name":"spr_dark_bg",
+    "path":"sprites/spr_dark_bg/spr_dark_bg.yy",
   },
   "spriteMaskId":null,
   "visible":false,

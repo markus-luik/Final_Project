@@ -10,8 +10,8 @@
   "name":"obj_phone",
   "overriddenProperties":[],
   "parent":{
-    "name":"ASSETS",
-    "path":"folders/Objects/ASSETS.yy",
+    "name":"Phone",
+    "path":"folders/Objects/ASSETS/Phone.yy",
   },
   "parentObjectId":null,
   "persistent":false,

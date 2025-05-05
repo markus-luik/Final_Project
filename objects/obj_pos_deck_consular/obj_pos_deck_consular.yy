@@ -6,8 +6,8 @@
   "name":"obj_pos_deck_consular",
   "overriddenProperties":[],
   "parent":{
-    "name":"Positions",
-    "path":"folders/Objects/Positions.yy",
+    "name":"cards",
+    "path":"folders/Objects/Positions/cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,

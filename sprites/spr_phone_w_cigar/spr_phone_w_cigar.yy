@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Assets",
-    "path":"folders/Sprites/Play/Assets.yy",
+    "name":"archived",
+    "path":"folders/Sprites/archived.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

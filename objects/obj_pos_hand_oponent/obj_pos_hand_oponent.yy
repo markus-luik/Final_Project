@@ -6,8 +6,8 @@
   "name":"obj_pos_hand_oponent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Positions",
-    "path":"folders/Objects/Positions.yy",
+    "name":"cards",
+    "path":"folders/Objects/Positions/cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,
