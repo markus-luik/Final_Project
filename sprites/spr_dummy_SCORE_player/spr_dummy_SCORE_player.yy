@@ -19,7 +19,8 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"f4404d88-5e1a-4999-873b-0ed012af2c00","blendMode":0,"displayName":"default","isLocked":false,"name":"f4404d88-5e1a-4999-873b-0ed012af2c00","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d4bbbc6f-541a-40d3-85ac-ebfd343bae14","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"d4bbbc6f-541a-40d3-85ac-ebfd343bae14","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f4404d88-5e1a-4999-873b-0ed012af2c00","blendMode":0,"displayName":"default","isLocked":false,"name":"f4404d88-5e1a-4999-873b-0ed012af2c00","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"spr_dummy_SCORE_player",
   "nineSlice":null,

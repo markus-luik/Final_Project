@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_pos_money",
+  "%Name":"obj_pos_phone",
   "eventList":[],
   "managed":true,
-  "name":"obj_pos_money",
+  "name":"obj_pos_phone",
   "overriddenProperties":[],
   "parent":{
     "name":"Positions",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_dummy_money",
-    "path":"sprites/spr_dummy_money/spr_dummy_money.yy",
+    "name":"spr_dummy_phone_pos",
+    "path":"sprites/spr_dummy_phone_pos/spr_dummy_phone_pos.yy",
   },
   "spriteMaskId":null,
   "visible":false,

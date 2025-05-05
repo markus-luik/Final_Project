@@ -1,11 +1,18 @@
-//ADD SOUND FX AND SCREEN SHAKE FOR MORE SIGNIFICANCE ON THE PHONE
-//change 
+//LERP
+x = lerp(x,x_to_move,lerping);
+y = lerp(y,y_to_move,lerping);
 
-
-if position_meeting(mouse_x,mouse_y,id) && mouse_check_button_pressed(1) && obj_MANAGER.playing && obj_MANAGER.op_played && (ds_list_size(obj_MANAGER.player_hand) == 0){
-	click_counter ++;
-	new_pos();
+//Mouse hover
+if position_meeting(mouse_x,mouse_y,obj_pos_phone_zone) && obj_MANAGER.playing && obj_MANAGER.op_played && (ds_list_size(obj_MANAGER.player_hand) == 0){
+	//click_counter ++;
+	hovering_over = true; //hovering over phone
+	x_to_move = x_pos;
+	y_to_move = y_pos;
 	show_debug_message("Ring Ring "+ string(click_counter));
+}else{
+	hovering_over = false;
+	x_to_move = starting_x;
+	y_to_move = starting_y;
 }
 
 switch click_counter{
@@ -39,6 +46,17 @@ switch click_counter{
 	break;
 }
 
+
+if (hovering_over){
+		locked = false;
+		show_debug_message("UNLOCKED")
+		
+}
+else {
+		locked = true;
+}
+
+show_debug_message("Alpha "+string(alpha))
 //DEV OVERRIDE
 if keyboard_check_pressed(ord("P")){
 	draw_card();
