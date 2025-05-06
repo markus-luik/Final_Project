@@ -71,6 +71,9 @@ function debugger(){
 		show_debug_message("------");
 		show_debug_message("image_index "+string(image_index));
 		show_debug_message("image_number "+string(image_number));
+		show_debug_message("------");
+		show_debug_message("BIG? "+string(BIG));
+		show_debug_message("active? "+string(active));
 		show_debug_message("------------------");
 	}
 
