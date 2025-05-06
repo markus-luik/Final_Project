@@ -98,6 +98,7 @@
     {"name":"spr_dummy_WeChat","order":11,"path":"sprites/spr_dummy_WeChat/spr_dummy_WeChat.yy",},
     {"name":"spr_maoliang","order":4,"path":"sprites/spr_maoliang/spr_maoliang.yy",},
     {"name":"spr_phone_OPEN","order":1,"path":"sprites/spr_phone_OPEN/spr_phone_OPEN.yy",},
+    {"name":"spr_phone_rim","order":5,"path":"sprites/spr_phone_rim/spr_phone_rim.yy",},
     {"name":"spr_phone_unlocking","order":2,"path":"sprites/spr_phone_unlocking/spr_phone_unlocking.yy",},
     {"name":"spr_phone_w_cigar","order":1,"path":"sprites/spr_phone_w_cigar/spr_phone_w_cigar.yy",},
     {"name":"spr_Q_criminal","order":3,"path":"sprites/spr_Q_criminal/spr_Q_criminal.yy",},
@@ -110,6 +111,7 @@
     {"name":"spr_title","order":1,"path":"sprites/spr_title/spr_title.yy",},
     {"name":"spr_translation_tray","order":2,"path":"sprites/spr_translation_tray/spr_translation_tray.yy",},
     {"name":"spr_translation","order":4,"path":"sprites/spr_translation/spr_translation.yy",},
+    {"name":"spr_WeChatOpen","order":1,"path":"sprites/spr_WeChatOpen/spr_WeChatOpen.yy",},
     {"name":"Sprite23","order":22,"path":"sprites/Sprite23/Sprite23.yy",},
   ],
 }

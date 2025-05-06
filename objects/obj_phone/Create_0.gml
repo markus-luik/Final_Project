@@ -47,7 +47,6 @@ function draw_card(){
 
 //debugging boolean
 d_bug_ON = false;
-
 function debugger(){
 	if keyboard_check_pressed(ord("P")){
 		if d_bug_ON{
