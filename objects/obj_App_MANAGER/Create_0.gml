@@ -11,11 +11,15 @@ dep = obj_phone.depth;
 	
 	
 function app_creation(app, app_x, app_y){
-	instance_create_depth(app_x,app_y,dep-1,app); 
-	show_debug_message(string(app)+" created");
+	if(instance_number(app) < 1){
+		instance_create_depth(app_x,app_y,dep-1,app); 
+		show_debug_message(string(app)+" created with ID "+string(app.id));
+	}
 }
 
 function app_destruction(app){
-	instance_destroy(app); 
-	show_debug_message(string(app)+" destroyed");
+	if(instance_number(app) > 0){
+		instance_destroy(app); 
+		show_debug_message(string(app)+" destroyed");
+	}
 }

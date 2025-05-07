@@ -1,14 +1,16 @@
 draw_self();
 
-if position_meeting(mouse_x,mouse_y,id){
-	if mouse_check_button_pressed(1)
-	{
-		image_index = 1;
-	}else if mouse_check_button_released(1)
-	{
-		image_index = 0;
-		APP_ON = true;
-	}
+////SHADING FUNCTION
+	//if mouse clicks and is over icon
+if mouse_check_button_pressed(1) && position_meeting(mouse_x,mouse_y,id)
+{
+	image_index = 1; //shaded
+	
+	//if mouse releases AND the icon was shaded
+}else if mouse_check_button_released(1) && image_index == 1
+{
+	image_index = 0; //unshaded
+	APP_ON = true; //triggers opening
 }
 
 if APP_ON{
