@@ -38,7 +38,7 @@ function debugger(){
 	
 	if d_bug_ON{
 		show_debug_message("------------------");
-		show_debug_message("--- WeChat info ---");
+		show_debug_message("--- " + string(app_name) + " info ---");
 		show_debug_message("APP_ON:" +string(APP_ON));
 		show_debug_message("bg_x "+string(bg_x));
 		show_debug_message("bg_y "+string(bg_y));

@@ -11,4 +11,7 @@ if mouse_check_button_pressed(1) && position_meeting(mouse_x,mouse_y,id)
 {
 	image_index = 0; //unshaded
 	Message_open = true; //triggers opening
+	click_counter ++;
 }
+
+draw_text_transformed_color(x-20,y+30,"Please..",0.25,0.25,0,c_black,c_black,c_black,c_black,1);

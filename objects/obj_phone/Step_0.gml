@@ -6,7 +6,7 @@ scale = lerp(scale,to_scale,lerping); //changes sprite size (via variable)
 		image_yscale = scale;
 
 //Mouse hover
-if position_meeting(mouse_x,mouse_y,obj_pos_phone_zone) && !BIG && obj_MANAGER.playing && obj_MANAGER.op_played{
+if position_meeting(mouse_x,mouse_y,obj_pos_phone_zone) && !BIG && obj_MANAGER.playing && obj_MANAGER.op_played && !(ds_list_size(obj_MANAGER.player_hand) >= 1){
 	//click_counter ++;
 	hovering_over = true; //hovering over phone
 	x_to_move = x_pos;
@@ -26,15 +26,7 @@ if position_meeting(mouse_x,mouse_y,obj_pos_phone_zone) && !BIG && obj_MANAGER.p
 //Pressing OUTSIDE of phone -- sending it back
 if !position_meeting(mouse_x,mouse_y,obj_phone){
 	if mouse_check_button_pressed(1){
-		////RESETS variables
-		BIG = false;
-		active = false;
-		////position
-		x_to_move = starting_x;
-		y_to_move = starting_y;
-		////scale
-		to_scale = starting_scale;
-		show_debug_message("Ring Ring Phone should have scaled back down");
+		phone_close();
 	}
 }
 

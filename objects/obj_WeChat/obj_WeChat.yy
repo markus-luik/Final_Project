@@ -2,18 +2,22 @@
   "$GMObject":"",
   "%Name":"obj_WeChat",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_WeChat",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_app","path":"objects/obj_app/obj_app.yy",},"propertyId":{"name":"app_name","path":"objects/obj_app/obj_app.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"WeChat",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_app","path":"objects/obj_app/obj_app.yy",},"propertyId":{"name":"open_bg","path":"objects/obj_app/obj_app.yy",},"resource":{"name":"spr_WeChatOpen","path":"sprites/spr_WeChatOpen/spr_WeChatOpen.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_WeChatOpen",},
+  ],
   "parent":{
     "name":"Phone",
     "path":"folders/Objects/ASSETS/Phone.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_app",
+    "path":"objects/obj_app/obj_app.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

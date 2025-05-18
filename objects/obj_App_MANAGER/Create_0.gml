@@ -7,6 +7,12 @@ dep = obj_phone.depth;
 	We_x_pos = obj_pos_WeChat.x;
 	We_y_pos = obj_pos_WeChat.y;
 	WeChatID = 0;
+	//Chase
+	ChaseExists = false;
+	Chase_x_pos = obj_pos_Chase.x;
+	Chase_y_pos = obj_pos_Chase.y;
+	ChaseID = 0;
+	
 	
 	
 	

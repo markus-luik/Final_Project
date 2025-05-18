@@ -77,3 +77,16 @@ function debugger(){
 	}
 
 }
+
+function phone_close()
+{
+	////RESETS variables
+		BIG = false;
+		active = false;
+		////position
+		x_to_move = starting_x;
+		y_to_move = starting_y;
+		////scale
+		to_scale = starting_scale;
+		show_debug_message("Ring Ring Phone should have scaled back down");
+}
