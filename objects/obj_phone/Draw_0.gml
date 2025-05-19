@@ -1,5 +1,6 @@
 //draws dark bg behind BIG phone
 if BIG {
+	depth = -3000;
 	if alpha_bg < 1 {alpha_bg += unlock_speed;} //transition speed
 		draw_sprite_ext(spr_dark_bg,0,0,0,1,1,0,c_white,alpha_bg); //black bg
 		
@@ -29,6 +30,7 @@ if BIG {
 	
 //phone on the side
 if !BIG {
+	depth = -2000;
 //draws previous sprite under new sprite for phone lock/unlock effect
 if locked {
 	if alpha > 0 {alpha -= lock_speed;} //transition speed	

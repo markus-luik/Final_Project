@@ -22,7 +22,7 @@ if position_meeting(mouse_x,mouse_y,obj_title_UI_pos_QUIT){ //hovered over
 }else{ //regular scale + color
 	q_c = c_black;
 	q_z_to_be = 0.75; 
-	x_pos_quit_to_be = (room_width/2)-(string_width(t_quit)/3); //X
+	x_pos_quit_to_be = (room_width/2)-(string_width(t_quit)/2); //X
 }
 q_z = lerp(q_z,q_z_to_be,0.175) //lerp scale
 x_pos_quit = lerp(x_pos_quit,x_pos_quit_to_be,0.175) //lerp x

@@ -10,7 +10,7 @@ y_pos_p = obj_pos_PLAYER_score.y;
 x_pos_money = obj_pos_money.x;
 y_pos_money = obj_pos_money.y;
 
-money = 800;
+money = 70;
 money_to_be = money;
 
 visa_done=false;

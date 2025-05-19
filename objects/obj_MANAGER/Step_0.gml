@@ -136,6 +136,7 @@ if playing{
 				}
 				else if (p_trans && (p_i == 0 && o_i == 1 || p_i == 2 && o_i == 3 || p_i == 4 && o_i == 5  || p_i == 6 && o_i == 7 )){ //player wins
 					if !score_changed {player_score ++; 
+						obj_energy_bar.image_index ++;
 						audio_play_sound(snd_win,1,false);
 						score_changed = true;
 						}
@@ -145,6 +146,7 @@ if playing{
 				else{ //oponent wins
 					if !score_changed {
 						oponent_score ++;
+						obj_energy_bar.image_index ++;
 						audio_play_sound(snd_loss,1,false);
 						show_message("I don't understand, it needs to be in Czech.");
 						score_changed = true;
@@ -173,10 +175,10 @@ if (deck_num == 0 && player_num == 0) {
 	///RESHUFFLING
 	///
 if (!reshuffled){
-	show_message("Visa submitted. Now you have to hand in your passport, wait 90 days, do an interview, and maybe not even get it.... Good luck and have fun in Prague!");
+	show_message("You never submitted that visa....");
 	obj_MANAGER_text__incl_score.visa_done = true;
 	obj_black_Text_bg.visible=true;
-	game_end();
+	room_goto(rm_ending);
 }
 
 //show_debug_message(comp[|0]);

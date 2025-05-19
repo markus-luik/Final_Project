@@ -164,6 +164,10 @@ function draw_card(){
 	var dealt_card = ds_list_find_value(deck,ds_list_size(deck)-1); //-1 because ds list starts at 0
 						
 		if (!(dealt_card == undefined)) {
+			
+			//energy bar
+			obj_energy_bar.image_index ++;
+			
 			//deletes card from deck list
 			ds_list_delete(deck,ds_list_size(deck)-1);
 			//adds card to player hand list

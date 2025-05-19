@@ -34,5 +34,5 @@
     "path":"sprites/spr_translation_tray/spr_translation_tray.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

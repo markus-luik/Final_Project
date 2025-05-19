@@ -13,13 +13,14 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"c1e1eae9-3522-477d-b871-aa5551a2b316","name":"c1e1eae9-3522-477d-b871-aa5551a2b316","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"4caa1bfb-96cc-4914-bd2b-9570fc2eb77b","name":"4caa1bfb-96cc-4914-bd2b-9570fc2eb77b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"66b591d9-af0c-4851-8f31-bbf602b5005d","name":"66b591d9-af0c-4851-8f31-bbf602b5005d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":3,
   "gridY":3,
   "height":204,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"5b1cac9d-5e14-4779-b3ca-bc24526145af","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"5b1cac9d-5e14-4779-b3ca-bc24526145af","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"c784c48e-4da9-43db-853d-a4bf0d390517","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"c784c48e-4da9-43db-853d-a4bf0d390517","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"b7308e43-b645-4921-8d1e-87c6f5e5b23f","blendMode":0,"displayName":"default","isLocked":false,"name":"b7308e43-b645-4921-8d1e-87c6f5e5b23f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
@@ -76,8 +77,8 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1e1eae9-3522-477d-b871-aa5551a2b316","path":"sprites/spr_criminalRec_US/spr_criminalRec_US.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"7153aa1f-9cb8-44ef-b640-7e156105dc4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4caa1bfb-96cc-4914-bd2b-9570fc2eb77b","path":"sprites/spr_criminalRec_US/spr_criminalRec_US.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0087671b-39ff-4822-befe-c9bbbde45ba8","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66b591d9-af0c-4851-8f31-bbf602b5005d","path":"sprites/spr_criminalRec_US/spr_criminalRec_US.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"72ff3711-e983-4e4d-b34a-985b78cc1f9c","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

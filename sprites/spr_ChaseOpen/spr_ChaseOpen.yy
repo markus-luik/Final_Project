@@ -20,6 +20,13 @@
   "height":204,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"4bbcfdd1-3a63-42a8-b053-5164c376588a","blendMode":0,"displayName":"Icons","isLocked":false,"name":"4bbcfdd1-3a63-42a8-b053-5164c376588a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"07d441f7-5f28-4adc-8765-7cd13252a75e","blendMode":0,"displayName":"Logo","isLocked":false,"name":"07d441f7-5f28-4adc-8765-7cd13252a75e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"064cf9b7-c306-42c3-9f6d-16580dc41cd1","blendMode":0,"displayName":"Money","isLocked":false,"name":"064cf9b7-c306-42c3-9f6d-16580dc41cd1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f023187a-cf7a-4f8c-815f-6b65455f7ac7","blendMode":0,"displayName":"text","isLocked":false,"name":"f023187a-cf7a-4f8c-815f-6b65455f7ac7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e7e3da4d-c5fa-41fb-99ca-7174d0e3c908","blendMode":0,"displayName":"Money zone","isLocked":false,"name":"e7e3da4d-c5fa-41fb-99ca-7174d0e3c908","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c5e3618c-39fd-462a-b639-8d33a27b77fc","blendMode":0,"displayName":"Wireframe","isLocked":false,"name":"c5e3618c-39fd-462a-b639-8d33a27b77fc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"280cf7ae-9bb2-47f0-9107-0848c441c3d8","blendMode":0,"displayName":"Wireframe shadow","isLocked":false,"name":"280cf7ae-9bb2-47f0-9107-0848c441c3d8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"9e451a72-c07a-4faa-8cd4-f0d238da0b3f","blendMode":0,"displayName":"Bg","isLocked":false,"name":"9e451a72-c07a-4faa-8cd4-f0d238da0b3f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"07f8d0be-698e-44d9-9071-8e31075ff0e6","blendMode":0,"displayName":"Rim ref new","isLocked":false,"name":"07f8d0be-698e-44d9-9071-8e31075ff0e6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],

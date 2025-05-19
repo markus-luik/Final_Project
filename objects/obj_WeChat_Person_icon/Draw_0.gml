@@ -5,6 +5,7 @@ draw_self();
 if mouse_check_button_pressed(1) && position_meeting(mouse_x,mouse_y,id)
 {
 	image_index = 1; //shaded
+	audio_play_sound(snd_call,1,false);
 	
 	///if mouse releases AND the icon was shaded
 }else if mouse_check_button_released(1) && image_index == 1

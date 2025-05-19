@@ -1,4 +1,4 @@
-depth = -2000;
+depth = -2000; //light is -2001
 
 click_counter = 0;
 starting_x = x;

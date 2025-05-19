@@ -3,7 +3,7 @@
 //Y pos is set by objects
 
 //PLAY
-t_play = "Play";
+t_play = "PLAY";
 s_c = c_black; //color
 s_z = 1; //scale
 s_z_to_be = s_z; //scale lerp
@@ -12,7 +12,7 @@ x_pos_play_to_be = x_pos_play; //X lerp
 y_pos_play = obj_title_UI_pos_START.y; //Y pos
 
 //QUIT
-t_quit = "I'm done...";
+t_quit = "I'M DONE...";
 q_c = c_black; //color
 q_z = 0.75; //scale
 q_z_to_be = q_z; //scale lerp
